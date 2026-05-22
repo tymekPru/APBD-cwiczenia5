@@ -1,6 +1,67 @@
-@APBD_cwiczenia5_HostAddress = http://localhost:5203
+@Cwiczenia5_HostAddress = http://localhost:5099
 
-GET {{APBD_cwiczenia5_HostAddress}}/weatherforecast/
+### GET - lista wszystkich komputerow
+GET {{Cwiczenia5_HostAddress}}/api/pcs
 Accept: application/json
 
-###
+### GET - komponenty komputera o id = 1
+GET {{Cwiczenia5_HostAddress}}/api/pcs/1/components
+Accept: application/json
+
+### GET - komponenty nieistniejacego komputera (404 Not Found)
+GET {{Cwiczenia5_HostAddress}}/api/pcs/999/components
+Accept: application/json
+
+### POST - dodanie nowego komputera (201 Created)
+POST {{Cwiczenia5_HostAddress}}/api/pcs
+Content-Type: application/json
+
+{
+  "name": "Gaming Beast X",
+  "weight": 12.5,
+  "warranty": 36,
+  "createdAt": "2026-05-08T09:00:00",
+  "stock": 5
+}
+
+### POST - niepoprawne dane wejsciowe (400 Bad Request)
+POST {{Cwiczenia5_HostAddress}}/api/pcs
+Content-Type: application/json
+
+{
+  "name": "",
+  "weight": -1,
+  "warranty": -5,
+  "createdAt": "2026-05-08T09:00:00",
+  "stock": -10
+}
+
+### PUT - edycja komputera o id = 1 (200 OK)
+PUT {{Cwiczenia5_HostAddress}}/api/pcs/1
+Content-Type: application/json
+
+{
+  "name": "Gaming Beast X v2",
+  "weight": 13.0,
+  "warranty": 48,
+  "createdAt": "2026-05-08T09:00:00",
+  "stock": 7
+}
+
+### PUT - edycja nieistniejacego komputera (404 Not Found)
+PUT {{Cwiczenia5_HostAddress}}/api/pcs/999
+Content-Type: application/json
+
+{
+  "name": "Nieistniejacy",
+  "weight": 1.0,
+  "warranty": 12,
+  "createdAt": "2026-05-08T09:00:00",
+  "stock": 1
+}
+
+### DELETE - usuniecie komputera o id = 2 (204 No Content)
+DELETE {{Cwiczenia5_HostAddress}}/api/pcs/2
+
+### DELETE - usuniecie nieistniejacego komputera (404 Not Found)
+DELETE {{Cwiczenia5_HostAddress}}/api/pcs/999
