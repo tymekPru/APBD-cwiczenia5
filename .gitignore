@@ -28,3 +28,6 @@ x86/
 
 ## Logs
 *.log
+
+## macOS
+.DS_Store

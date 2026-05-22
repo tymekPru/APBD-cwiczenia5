@@ -1,4 +1,4 @@
-@Cwiczenia5_HostAddress = http://localhost:5099
+@Cwiczenia5_HostAddress = http://localhost:5203
 
 ### GET - lista wszystkich komputerow
 GET {{Cwiczenia5_HostAddress}}/api/pcs
