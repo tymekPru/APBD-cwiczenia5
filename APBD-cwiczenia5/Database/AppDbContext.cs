@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Cwiczenia5.Database;
+namespace APBD_Cwiczenia5.Database;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {

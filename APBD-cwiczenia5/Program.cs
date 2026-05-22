@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using APBD_Cwiczenia5.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
