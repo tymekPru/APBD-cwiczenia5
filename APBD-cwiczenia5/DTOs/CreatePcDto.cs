@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Cwiczenia5.DTOs;
+namespace APBD_Cwiczenia5.DTOs;
 
 // DTO przychodzące dla tworzenia komputera
 public class CreatePcDto

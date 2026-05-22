@@ -1,4 +1,4 @@
-namespace Cwiczenia5.DTOs;
+namespace APBD_Cwiczenia5.DTOs;
 
 public class PcComponentDto
 {

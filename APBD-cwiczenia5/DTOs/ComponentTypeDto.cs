@@ -1,4 +1,4 @@
-namespace Cwiczenia5.DTOs;
+namespace APBD_Cwiczenia5.DTOs;
 
 // DTO zwracane przez API z info o typie komponentu
 public class ComponentTypeDto
